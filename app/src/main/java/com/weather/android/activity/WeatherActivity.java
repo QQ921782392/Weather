@@ -23,6 +23,7 @@ import com.bumptech.glide.Glide;
 import com.weather.android.R;
 import com.weather.android.gson.Forecast;
 import com.weather.android.gson.Weather;
+import com.weather.android.service.AutoUpdateService;
 import com.weather.android.util.HttpUtil;
 import com.weather.android.util.Utility;
 
@@ -32,6 +33,15 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
+/**
+ * 项目名称：Weather
+ * 类描述：天气界面
+ * 创建人：建航
+ * 创建时间：2017/2/24 15:16
+ * 修改人：建航
+ * 修改时间：2017/2/24 15:16
+ * 修改备注：
+ */
 public class WeatherActivity extends AppCompatActivity {
 
     public DrawerLayout drawerLayout;
@@ -231,7 +241,7 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
-//        Intent intent = new Intent(this, AutoUpdateService.class);
-//        startService(intent);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }
