@@ -15,7 +15,7 @@ import org.litepal.crud.DataSupport;
 /**
  * LitePal中的每一个实体类否必须继承DataSupport
  */
-public class province extends DataSupport{
+public class Province extends DataSupport{
     //类的字段
     private int id;
     //省的名字
